@@ -1,0 +1,94 @@
+/* --- 基本設定 --- */
+body {
+font-family: Arial, sans-serif;
+background-color: whitesmoke;
+margin: 0;
+}
+
+
+.main-container {
+display: flex;
+width: 100%;
+border-radius: 10px;
+box-shadow: 0px 4px ;
+}
+
+/* --- 左側欄 --- */
+.left-panel {
+width: 30%;
+background-color: steelblue;
+color: white;
+padding: 20px;
+
+}
+
+.profile-img {
+width: 100%;
+border-radius: 10px;
+}
+
+.subtitle {
+margin-top: 10px;
+color: whitesmoke;
+}
+
+.school-logo {
+width: 80%;
+margin-top: 20px;
+}
+
+/* --- 右側主內容 --- */
+.right-panel {
+width: 70%;
+padding: 40px;
+}
+
+/* --- 區塊標題 --- */
+.section {
+margin-bottom: 30px;
+}
+.section-title{
+border-bottom: 2px solid #007bff;
+padding-bottom: 10px;
+}
+
+/* --- Skill Tags --- */
+.skill-tags span {
+display: inline-block;
+padding: 8px 15px;
+background-color: palegreen;
+border-radius: 8px;
+margin-right: 10px;
+margin-top: 10px;
+}
+
+/*Homework & Lab --- */
+.cards {
+display: flex;
+gap: 30px;
+}
+
+.card {
+background-color: white;
+padding: 20px;
+width: 45%;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Music Icons --- */
+.music-row {
+display: flex;
+justify-content: space-between;
+}
+
+.music img {
+width: 50px;
+margin-bottom: 10px;
+}
+
+/* --- Music Description --- */
+.music-desc {
+margin-top: 15px;
+color: whitesmoke;
+}
