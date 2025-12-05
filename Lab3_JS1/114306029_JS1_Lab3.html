@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+</head>
+<body>
+	<div class = "container">
+	    <h1>114306029_Number Guessing Game</h1>
+        
+	    
+        <!-- 修正：加入訊息提示框和預留文字 -->
+        <div id="message-box"></div>
+		<div id="result-container">
+			 <img id="result-image" src="" alt="Game Result">
+			 </div>
+		 </div>
+	
+<script>
+       
+            var min = 1;
+            var max = 100;
+            var chances = 7;
+            var answer = Math.floor(Math.random() * 100) + 1;
+            var gameActive = true; 
+
+            
+            document.getElementById('result-image').style.display = 'none';
+			document.getElementById('result-image').src = '';
+			
+
+            // 遊戲開始通知 (取代原本的 message-box 提示)
+           var promptMessage = '請輸入' + min + '到' + max + ' 的整數。你還有 ' + chances + '次機會';
+          	var input = window.prompt(promptMessage);
+
+            while(chances > 0 && gameActive){
+                var promptMessage = '請輸入' + min + '到' + max + ' 的整數。你還有 ' + chances + '次機會';
+                var input = window.prompt(promptMessage);
+
+                var trimmedInput = input.trim();
+                
+              
+                if (trimmedInput === "" || isNaN(trimmedInput)) {
+                    alert('請輸入有效範圍內的數字(不能超出1到100)!');
+                    continue; 
+                }
+
+                var guess = Number(trimmedInput);
+
+                if (guess < min || guess > max) {
+                    alert('請輸入有效範圍內的數字( 不能超出 ' + min + ' 到 ' + max + ')');
+                    continue; 
+                }
+
+                
+                
+                if (guess === answer) {
+                    
+                    alert('恭喜你猜對了! 正確答案是 ' + answer);
+                    
+                    document.getElementById('placeholder-text').style.display = 'none';
+                    document.getElementById('result-image').src = 'correct.jpg';
+                    document.getElementById('result-image').style.display = 'block';
+                    gameActive = false;
+                    break;
+                } else if (guess < answer) {
+                    min = guess + 1;
+                    chances--; 
+                    alert('請輸入' + min + '到' + max + ' 的整數。你還有 ' + chances + '次機會' );
+                } else if (guess > answer) {
+                    max = guess - 1;
+                    chances--; // 猜錯，扣除機會
+                    alert('請輸入' + min + '到' + max + ' 的整數。你還有 ' + chances + '次機會' );
+                }
+            }
+		
+            if (chances === 0 && gameActive) {
+                // 失敗: 使用 alert() 通知使用者正確答案
+                alert('正確答案是 ' + answer);
+                
+                document.getElementById('placeholder-text').style.display = 'none';
+				document.getElementById('result-image').src = 'wrong.jpg';		
+				document.getElementById('result-image').style.display = 'block';
+				 gameActive = false;
+            }
+            
+            
+		
+	</script>
+</body>
+</html>
