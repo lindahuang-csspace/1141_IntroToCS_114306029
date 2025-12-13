@@ -1,0 +1,69 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+display: flex;
+justify-content: center;
+}
+
+.container {
+max-width: 600px;
+background-color: white;
+padding: 20px;
+border: 1px solid #ccc;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Input Form Styling */
+#gradeInputForm {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+align-items: center;
+}
+
+#gradeInputForm input {
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+#gradeInputForm button {
+padding: 8px 15px;
+background-color: #e0e0e0;
+border: 1px solid #ccc;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* Table Styling */
+#gradeTable {
+width: 100%;
+border-collapse: collapse;
+text-align: center;
+border: 1px solid #ccc;
+}
+
+#gradeTable th, #gradeTable td {
+border: 1px solid #ccc;
+padding: 10px;
+}
+
+#gradeTable thead th {
+font-weight: bold;
+background-color: whitesmoke;
+}
+
+#gradeTable tfoot tr {
+font-weight: bold;
+}
+
+#gradeTable tfoot td:first-child {
+text-align: left;
+padding-left: 20px;
+}
