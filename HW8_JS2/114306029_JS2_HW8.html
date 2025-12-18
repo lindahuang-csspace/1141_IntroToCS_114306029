@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>JS Calculator</h1>
+        
+        <div class="input-group">
+            <label for="num1">Number 1</label>
+            <input type="number" id="num1" placeholder="Enter first number">
+        </div>
+
+        <div class="input-group">
+            <label for="num2">Number 2</label>
+            <input type="number" id="num2" placeholder="Enter second number">
+        </div>
+
+        <div class="input-group">
+            <label for="operator">Operate way?</label>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <button id="calculateBtn" onclick="calculate()">Add</button>
+
+        <div class="result-area">
+            <p id="resultDisplay">Result = 0.00</p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
